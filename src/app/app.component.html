@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <span>AngularFire Example</span>
+  <span fxFlex="auto"></span>
+  <button mat-button [routerLink]="['/company/all']">Companies</button>
+</mat-toolbar>
+<div>
+  <div fxFlexOffset.gt-sm="15%" fxFlex.gt-sm="70%">
+    <p>container</p>
+    <router-outlet></router-outlet>
+  </div>
+</div>

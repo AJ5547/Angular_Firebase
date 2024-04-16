@@ -1,0 +1,10 @@
+button[mat-fab] {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+.company-card {
+  color: white;
+  margin: 5px;
+  padding: 5px;
+}
