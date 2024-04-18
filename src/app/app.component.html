@@ -2,10 +2,12 @@
   <span>AngularFire Example</span>
   <span fxFlex="auto"></span>
   <button mat-button [routerLink]="['/company/all']">Companies</button>
+  <button mat-button [routerLink]="['/contact/all']">Contacts</button>
 </mat-toolbar>
+
 <div>
   <div fxFlexOffset.gt-sm="15%" fxFlex.gt-sm="70%">
-    <p>container</p>
+    <div class="paddingTop"></div>
     <router-outlet></router-outlet>
   </div>
 </div>

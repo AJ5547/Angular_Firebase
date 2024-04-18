@@ -44,7 +44,7 @@ export class CompanyEditComponent implements OnInit {
     this.router.navigate(['/company/all']);
   }
   deleteCompany() {
-    this.companyService.deleteCompany();
+    this.companyService.deleteCompany(this.id);
     this.router.navigate(['/company/all']);
   }
   get id(): string {

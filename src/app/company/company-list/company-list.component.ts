@@ -10,7 +10,7 @@ import { Company } from '../../models/company';
 })
 export class CompanyListComponent implements OnInit {
 
-  public companies$: Observable<Company[]> | undefined;
+  public companies$: Observable<Company[]>;
 
   constructor(private companyService: CompanyService) {
     this.companies$ = EMPTY;

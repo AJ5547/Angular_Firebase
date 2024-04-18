@@ -1,0 +1,29 @@
+<div fxLayoutAlign="space-between center">
+  <h1>Contacts</h1>
+  <span fxFlex="auto"></span>
+  <mat-form-field>
+    <mat-select (selectionChange)="getContacts($event.value)">
+      <mat-option [value]="undefined">All</mat-option>
+      <mat-option
+        *ngFor="let company of companies$ | async"
+        [value]="company.id"
+        >{{ company.name }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div *ngFor="let contact of contacts$ | async" class="paddingBottom">
+  <mat-card fxLayoutAlign="center center">
+    <span class="paddingLeft">{{ contact.name }}</span>
+    <span fxFlex="auto"></span>
+    <!-- new line -->
+    <button mat-button [routerLink]="['/contact', contact.id]">Edit</button>
+    <!-- new line -->
+    <!-- <div class="paddingBottom"></div> -->
+  </mat-card>
+</div>
+
+<button mat-fab [routerLink]="['/contact/new']">
+  <mat-icon>add</mat-icon>
+</button>

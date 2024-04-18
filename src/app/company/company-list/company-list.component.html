@@ -1,15 +1,14 @@
 <h1>Companies</h1>
-<mat-card
-  *ngFor="let company of companies$ | async"
-  fxLayoutAlign="center center"
-  class="company-card"
->
-  <span>{{ company.name }}</span>
-  <span fxFlex="auto"></span>
-  <!-- new line -->
-  <button mat-button [routerLink]="['/company', company.id]">Edit</button>
-  <!-- new line -->
-</mat-card>
+<div *ngFor="let company of companies$ | async" class="paddingBottom">
+  <mat-card fxLayoutAlign="center center">
+    <span class="paddingLeft">{{ company.name }}</span>
+    <span fxFlex="auto"></span>
+    <!-- new line -->
+    <button mat-button [routerLink]="['/company', company.id]">Edit</button>
+    <!-- new line -->
+  </mat-card>
+</div>
+
 <button mat-fab [routerLink]="['/company/new']">
   <mat-icon>add</mat-icon>
 </button>
